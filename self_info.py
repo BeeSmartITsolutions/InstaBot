@@ -17,3 +17,4 @@ def self_info():
             print 'User does not exist'
     else:
         print 'status code received is other than 200'
+        exit()

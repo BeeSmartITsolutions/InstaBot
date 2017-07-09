@@ -1,15 +1,11 @@
 # instabot.py file created
 from self_info import self_info
-#fetching own informaation
 
-print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
-print '\t\tWelcome to InstaBot'
-print '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n'
+# fetching own information
 
-answer = raw_input('Enter your choice: \n1.\tShow your own profile Details \n2.\tSearch a User by its Username 3.\nExit')
+print '\n\n\t***************************************************'
+print '\n\t\t\tWelcome to InstaBot'
+print '\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'
+print '\t***************************************************\n'
 
-if len(answer) > 0 :
-    if answer == 1:
-        self_info()
-    if answer == 2:
-        get_user_id()
+self_info()
