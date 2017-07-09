@@ -4,18 +4,19 @@ import requests
 from constants import APP_ACCESS_TOKEN, BASE_URL
 from clint.textui import colored
 
+
 # get_user_id function defined
 
 def get_user_id(insta_username):
     # function logic
 
-    request_url = (BASE_URL + 'users/search?q=jack&access_token= %s') % (APP_ACCESS_TOKEN)
+    request_url = (BASE_URL + 'users/search?q=%s&access_token= %s') % (insta_username, APP_ACCESS_TOKEN)
     print colored.yellow('GET request url :- %s' % (request_url))
     user_info = requests.get(request_url).json()
 
     if user_info['meta']['code'] == 200:
         if len(user_info['data']):
-           return user_info['data'][0]['id']
+            return user_info['data'][0]['id']
         else:
             return None
     else:
