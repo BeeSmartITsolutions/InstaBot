@@ -8,6 +8,7 @@ from get_user_info import get_user_info
 from get_own_post import get_own_post
 from get_users_post import get_users_post
 from like_user_post import like_a_post
+from comment_on_user_post import commment_on_a_post
 
 
 print colored.yellow('\n\n\t***************************************************')
@@ -72,7 +73,7 @@ while show_menu:
             # Post a comment on the other users recent post
             print colored.green('\n\nYou want to post a comment on the other users recent post\n')
             other_username = raw_input('Enter the username')
-
+            commment_on_a_post(insta_username=other_username)
             print '\n\n'
 
         elif menu_choice == 7:
