@@ -12,7 +12,7 @@ from comment_on_user_post import commment_on_a_post
 
 
 print colored.yellow('\n\n\t***************************************************')
-print colored.green('\n\t\t\tWelcome to InstaBot')
+print colored.green('\t\t\tWelcome to InstaBot')
 print colored.green('\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 print colored.yellow('\t***************************************************\n')
 
