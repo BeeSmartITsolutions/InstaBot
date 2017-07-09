@@ -3,7 +3,7 @@ import requests, urllib
 from get_user_id import get_user_id
 from constants import APP_ACCESS_TOKEN, BASE_URL
 
-def get_users_post( insta_username):
+def get_users_post(insta_username):
     # function logic
 
     user_id = get_user_id(insta_username)
