@@ -47,7 +47,7 @@ while show_menu:
 
             # fetching other users detail
             print colored.green('\n\nYou want to see other users detail\n')
-            other_username = raw_input('Enter the username\t')
+            other_username = 'kunal_pathak21'
             get_user_info(insta_username= other_username)
             print '\n\n'
 
