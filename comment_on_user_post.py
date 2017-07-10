@@ -8,7 +8,7 @@ from get_users_post import get_users_post
 
 def commment_on_a_post(insta_username):
     # function logic
-    media_id = get_users_post(insta_username)
+    media_id = get_post_id(insta_username)
 
     if media_id == None:
         print colored.red('\nUsername does not exist')

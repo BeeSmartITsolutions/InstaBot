@@ -4,14 +4,15 @@ import requests
 
 from clint.textui import colored
 from constants import APP_ACCESS_TOKEN,BASE_URL
-from get_users_post import get_users_post
+from get_user_post_id import get_post_id
+
 
 def like_a_post(insta_username):
     # function logic
-    media_id = get_users_post(insta_username)
+    media_id = get_post_id(insta_username)
 
     request_url = (BASE_URL + 'media/%s/likes') % (media_id)
-    payload = {'access_token' : APP_ACCESS_TOKEN}
+    payload = {'access_token':APP_ACCESS_TOKEN}
     print colored.yellow('\nPOST request url : %s' % (request_url))
     user_info = requests.post(request_url,payload).json()
 
