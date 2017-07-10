@@ -14,13 +14,16 @@ def get_user_info(insta_username):
     if user_id == None:
         print colored.red('Username does not exist')
         exit()
-    request_url = (BASE_URL + 'users/%s/?access_token= %s') % (user_id, APP_ACCESS_TOKEN)
+    request_url = (BASE_URL + 'users/%s/?access_token=%s') % (user_id, APP_ACCESS_TOKEN)
     print colored.yellow('GET request url : %s' % (request_url))
     user_info = requests.get(request_url).json()
 
     if user_info['meta']['code'] == 200:
         if len(user_info['data']):
-            return user_info['data'][0]['id']
+            print colored.green('\nUsername is : %s' % (user_info['data']['username']))
+            print colored.green('\nNumber of people who are following him are : %s' % (user_info['data']['counts']['followed_by']))
+            print colored.green('\nNumber of people who are followed by him are : %s' % (user_info['data']['counts']['follows']))
+            print colored.green('\nNumber of posts he have uploaded till now are : %s' % (user_info['data']['counts']['media']))
         else:
             return None
     else:

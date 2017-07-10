@@ -21,7 +21,7 @@ show_menu = True
 while show_menu:
 
     menu_choices = colored.cyan("\nWhat do you want to do? \n\n1.\tFetch your own details \n2.\tFetch your recent "
-                                "post \n3.\tFetch your other users detail \n4.\tFetch your other users recent post "
+                                "post \n3.\tFetch other users detail \n4.\tFetch other users recent post "
                                 "\n5.\tLike the other users recent post \n6.\tComment on other users recent post "
                                 "\n7.\tClose Application\n\n")
     menu_choice = raw_input(menu_choices)
@@ -47,7 +47,7 @@ while show_menu:
 
             # fetching other users detail
             print colored.green('\n\nYou want to see other users detail\n')
-            other_username = 'kunal_pathak21'
+            other_username = raw_input('Enter the username')
             get_user_info(insta_username= other_username)
             print '\n\n'
 

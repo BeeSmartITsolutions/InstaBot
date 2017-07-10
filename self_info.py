@@ -5,7 +5,7 @@ from constants import APP_ACCESS_TOKEN, BASE_URL
 # self_info function
 def self_info():
     # function logic
-    request_url = (BASE_URL + 'users/self/?access_token= %s') % (APP_ACCESS_TOKEN)
+    request_url = (BASE_URL + 'users/self/?access_token=%s') % (APP_ACCESS_TOKEN)
     print colored.yellow('GET request url :- %s' % (request_url))
     user_info = requests.get(request_url).json()
 

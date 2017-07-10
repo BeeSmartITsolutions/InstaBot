@@ -10,9 +10,6 @@ def like_a_post(insta_username):
     # function logic
     media_id = get_users_post(insta_username)
 
-    if media_id == None:
-        print colored.red('\nUsername does not exist')
-        exit()
     request_url = (BASE_URL + 'media/%s/likes') % (media_id)
     payload = {'access_token' : APP_ACCESS_TOKEN}
     print colored.yellow('\nPOST request url : %s' % (request_url))
